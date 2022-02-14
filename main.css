@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Pacifico&display=swap');
+
+*{padding:0;margin:0;border:0;font-weight: 600;}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #242424;
+}
+
+.active {
+    transition: .7s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.postcard-front {
+    transition: .7s;
+    width: 300px;
+    height: 400px;
+    background: #c80000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0px);
+}
+
+.back {
+    transition: .7s linear;
+    position: absolute;
+    opacity: 0;
+    width: 320px;
+    height: 320px;
+    background: #FFFFFF;
+}
+
+.container.active .postcard-front {
+    transform: translateY(-100px);
+    z-index: 1;
+}
+
+.container.active .postcard-front {
+    opacity: 0;
+    z-index: -2;
+}
+
+.back {
+    background: #f1f1f1;
+    color: white;
+    z-index: -1;
+}
+
+.container.active .back {
+    opacity: 1;
+    z-index: 2;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.wrap img {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 30px;
+    width: 100%;
+    color: #F40000;
+}
+
+.open-me {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 100px;
+    background: #FFFFFF;
+    font-size: 24px;
+    line-height: 29px;
+    color: #BE0000;
+    transition: 0.3s;
+}
+
+.open-me:active {
+    background-color: rgb(190, 190, 190);
+}
+
+.main-heart {
+    position: absolute;
+    bottom: 65px;
+    width: 100px;
+    height: 85px;
+}
+
